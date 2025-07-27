@@ -9,9 +9,17 @@
 </head>
   <body>
     
-    <h1>Gestão de Clientes</h1>
-    
-    <div c-container="{{ url_for('client.clients_list')}}"></div>
+    <div class="container">
+      <h1 class="text-center">Gestão de Clientes</h1>
+      
+      <!-- Form to ADD clients -->
+      <div c-container="{{ url_for('client.form_client') }}"></div>
+      <hr>
+      <!-- Clients List -->
+      <h2> Clients List </h2>
+      <div c-container="{{ url_for('client.clients_list') }}"></div>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/cru.js')}}"></script>
